@@ -1,0 +1,83 @@
+<section id="expEdu">
+    <div id="exp" class="exp-edu">
+        <div class="container">
+            <div class="row">
+                <div class="row-inner">
+                    {{#each experience}}
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item  wow fadeIn animated" data-wow-delay="{{times @index}}s">
+                            <div class="inner">
+                                <div class="rect">
+                                    <div class="row-1 lr-padding">
+                                        <span class="period">{{period}}</span>
+                                        <span class="job pull-right">
+                                        <span>{{job}}</span>
+                                    </span>
+                                    </div>
+                                    <div class="content row-2 lr-padding">
+                                        <i class="fa fa-2x fa-{{iconType}} bg-icon" aria-hidden="true"></i>
+                                        {{content}}
+                                    </div>
+                                    <div class="row-3 lr-padding">
+                                        <span class="company">{{company}}</span>
+                                        <span class="position pull-right">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                <span>{{position}}</span>
+                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                    <div class="col-lg-4 col-md-4 col-sm-6 item">
+                        <h1 class="title">
+                            Experience
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edu" class="exp-edu">
+        <div class="container">
+            <div class="row">
+                <div class="row-inner">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 item">
+                        <h1 class="title">
+                            Education
+                        </h1>
+                    </div>
+                    {{#each education}}
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6  item wow fadeIn animated" data-wow-delay="{{times2 @index}}s">
+                            <div class="inner">
+                                <div class="rect">
+                                    <div class="row-1 lr-padding">
+                                        <span class="">{{period}}</span>
+                                        <span class="degree pull-right">
+                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                        <span>{{degree}}</span>
+                                    </span>
+                                    </div>
+                                    <div class="row-2 row lr-padding">
+                                        <div class="col-xs-4">
+                                            <img class="u-logo img-circle" src="images/pic/{{short}}.png" alt="{{short}}">
+                                        </div>
+                                        <div class="col-xs-8 edu-info">
+                                            <p class="university">{{university}}</p>
+                                            <p class="major">{{major}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row-3 lr-padding">
+                                        <div class="position">
+                                            <span class="glyphicon glyphicon-map-marker"></span>
+                                            <span>{{position}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

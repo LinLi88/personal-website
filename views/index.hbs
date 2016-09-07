@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lin's portfolio</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/lib/animate.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/lib/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand wow fadeInLeft animated" href="#home">
+                        <img src="images/pic/thumb1.jpg" class="img-circle" alt="Cinque Terre" width="80" height="80">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#expEdu">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#hobby">Hobbies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="home" class="jumbotron">
+            <div class="jumbo-inner-wrapper">
+                <h1 class="wow pulse animated">Lin LI</h1>
+                <div class="gradient-line"></div>
+                <p class="wow pulse animated">&lt; Web &nbsp; Developer &gt;</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        {{>about}}
+        {{>expEdu}}
+        {{>projects}}
+        {{>skills}}
+        {{>hobby}}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script type="text/javascript" src="javascripts/lib/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="javascripts/lib/bootstrap.js"></script>
+<script type="text/javascript" src="javascripts/lib/angular.js"></script>
+<script type="text/javascript" src="javascripts/lib/wow.min.js"></script>
+<script type="text/javascript" src="javascripts/lib/owl.carousel.min.js"></script>
+<script type="text/javascript" src="javascripts/lib/d3.min.js"></script>
+<script type="text/javascript" src="javascripts/lib/buble.menu.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
+</html>

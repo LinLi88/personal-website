@@ -1,0 +1,50 @@
+#about{
+  .vertical-stack{
+    margin-top:20px;
+  }
+  .about-me{
+    padding:15px;
+    .download-resume{
+      margin-top:30px;
+      color:#fff;
+      text-transform: uppercase;
+      .btn{
+        background-color: $primaryBlue;
+      }
+      .btn:hover{
+        color:#fff;
+        @include box-shadow($borderGray);
+      }
+    }
+  }
+  .photo{
+    .img-thumbnail{
+      @include box-shadow($shadowGray);
+      img{
+        width:300px;
+        height:auto;
+      }
+    }
+  }
+  @media screen and(max-width:$screen-sm){
+    .photo{
+      display:none;
+    }
+  }
+  .personal-info{
+    font-family: $fantasy;
+    font-size:14px;
+    td{
+      border-top:none;
+    }
+    thead{
+      font-size:28px;
+      color:$primaryBlue;
+    }
+    tbody{
+      td:nth-child(2){
+        font-family:sans-serif;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+#hobby{
+
+    background:$hobbyBgGray;
+    .nav{
+        font-size:14px;
+        li{
+            float:left;
+            margin:0 7px 10px 7px;
+            padding:4px 0;
+            border-top:3px solid $hobbyBgGray;
+            cursor: pointer;
+            a{
+                padding:0;
+                color:#000;
+            }
+            a:hover{
+                background-color: $hobbyBgGray;
+            }
+        }
+        li.active{
+            border-top-color:$primaryBlue;
+            a{
+                color:$primaryBlue;
+            }
+        }
+        li:hover{
+            border-top-color:$primaryBlue;
+        }
+    }
+    .gallery{
+        .hide{
+            diaplay:none;
+        }
+        .item{
+            margin: 3px;
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .lrbtn{
+            font-size:26px;
+            text-align:center;
+            color:rgba($primaryBlue,0.8);
+            i{
+                margin:10px;
+                cursor: pointer;
+            }
+            i:hover{
+
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+#expEdu{
+  background:url("../images/bg/bg_white.png") no-repeat center;
+  background-size:cover;
+  .exp-edu{
+    .row-inner{
+      .item{
+        padding:20px;
+        .title{
+          text-align: center;
+        }
+        .inner{
+          width:100%;
+          padding-bottom:80%;
+          position:relative;
+          background-color:$bodyBgGray;
+          border-radius:$border-radius-base;
+          @include box-shadow($shadowGray);
+          .rect{
+            color:$fontGray;
+            height: 100%;
+            position:absolute;
+            left:0;
+            right:0;
+            padding-top:5px;
+            .lr-padding{
+              padding:0 20px;
+            }
+            .row-1{
+              height:15%;
+              padding-top:10px;
+              padding-bottom:10px;
+              .pull-right{
+                color:$primaryBlue;
+                font-weight:bold;
+              }
+            }
+            .row-2{
+              height:70%;
+              color:#000;
+              padding-top:15px;
+              padding-bottom:10px;
+              position:relative;
+              .bg-icon{
+                margin-right:10px;
+                color:#F3E17E;
+              }
+            }
+            .row-3{
+              height:15%;
+              padding-top:10px;
+              padding-bottom:10px;
+              .position{
+                .glyphicon-map-marker{
+                  color:#c4c4c4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #exp{
+    .row-inner{
+      .title{
+        margin-top:45%;
+      }
+      .row-2{
+        background-color:$primaryBgBlue;
+        color:white;
+      }
+    }
+  }
+  #edu{
+    .row-inner{
+      .inner{
+        padding-bottom:70%;
+        .row-2{
+          background-color:#f6f3ea;
+          margin-left:0;
+          margin-right:0;
+          .u-logo{
+            width:100%;
+          }
+          .university{
+            font-weight: bold;
+          }
+        }
+      }
+      .title{
+        margin-top:15%;
+      }
+    }
+  }
+}

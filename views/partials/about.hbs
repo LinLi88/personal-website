@@ -1,0 +1,42 @@
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 about-me vertical-stack">
+                <h2 class="title">
+                   About me
+                </h2>
+                <div>
+                    {{person.about}}
+                </div>
+                <div class="download-resume">
+                    <button class="btn">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        <span>Resume</span>
+                    </button>
+                </div>
+            </div>
+            <div class="vertical-stack col-md-4 col-sm-6 col-xs-12 photo wow fadeIn animated">
+                <div class="img-thumbnail img-responsive">
+                    <img src="images/pic/photo1.JPG" alt="myPhoto">
+                </div>
+            </div>
+            <div class="vertical-stack col-md-4 col-sm-6 col-xs-12 personal-info">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td colspan="2"> Personal Information</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each person.info}}
+                            <tr>
+                                <td>{{item}} :</td>
+                                <td>{{content}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

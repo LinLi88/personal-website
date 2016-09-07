@@ -1,0 +1,48 @@
+#projects{
+  background:url("../images/bg/bg_blue.jpg") no-repeat center;
+  background-size:cover;
+  color:#fff;
+  .proj-item{
+    width:33.333%;
+    :hover{
+      cursor:pointer;
+    }
+    .proj-item-inner{
+      position:relative;
+      img{
+        width:100%;
+        position:relative;
+      }
+      .description-container{
+        width:100%;
+        height:100%;
+        border-radius:$border-radius-base;
+        background:rgba($progress-bar-info-bg,0.94);
+        position:absolute;
+        top:0;
+        padding:10%;
+        .description{
+          color:#000;
+        }
+      }
+    }
+    .proj-item-inner:hover{
+      @include box-shadow(#aaa);
+    }
+  }
+  @media screen and(max-width:$screen-lg){
+    .proj-item{
+      width:33.333%;
+    }
+  }
+  @media screen and (max-width:$screen-sm){
+    .proj-item{
+      width:49.999%;
+    }
+  }
+  @media screen and(max-width:$screen-xs){
+    .proj-item{
+      width:100%;
+    }
+  }
+}

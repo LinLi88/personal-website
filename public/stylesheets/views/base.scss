@@ -1,0 +1,56 @@
+//color
+$primaryBlue:#4c9ed9;
+//$primaryBlue : #031e50;
+$primaryBgBlue:#78b2e0;
+$borderGray : #999;
+$shadowGray : #ccc;
+$fontGray : #727272;
+$bodyBgGray : #fafafa;
+$hobbyBgGray:#f3eeeb;
+//font
+$fantasy : fantasy, Impact, Charcoal, sans-serif;
+$roboto:'Roboto', sans-serif;
+$overlook:'Overlock', cursive, sans-serif;
+
+//length
+$screenHeight:756px;
+
+//mixins
+@mixin gradient-bottom-line($color){
+  border-bottom:1px solid $color;
+  -webkit-border-image:
+          -webkit-linear-gradient(left, rgba(0,0,0,0),$color,rgba(0,0,0,0)) 1;
+  -moz-border-image:
+          -moz-linear-gradient(right, rgba(0,0,0,0),$color,rgba(0,0,0,0)) 1;
+  -o-border-image:
+          -o-linear-gradient(right, rgba(0,0,0,0),$color,rgba(0,0,0,0)) 1;
+  border-image:
+          linear-gradient(to right, rgba(0,0,0,0),$color,rgba(0,0,0,0)) 1;
+}
+
+@mixin gradient-background($color){
+  background: -webkit-linear-gradient(left,right,rgba(0,0,0,0),$color,rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,right,rgba(0,0,0,0),$color,rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right,right,rgba(0,0,0,0),$color,rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,rgba(0,0,0,0),$color,rgba(0,0,0,0)); /* Standard syntax */
+}
+
+@mixin box-shadow($color){
+  box-shadow:0 0 8px 1px $color;
+  -webkit-box-shadow:0 0 8px 1px $color;
+  -moz-box-shadow:0 0 8px 1px $color;
+  -o-box-shadow: 0 0 8px 1px $color;
+}
+
+//common css
+body{
+  background-color: $bodyBgGray;
+  font-size:12px;
+}
+section{
+  padding:100px 20px;
+}
+.title{
+  margin-bottom:30px;
+  font-family: $fantasy;
+}
