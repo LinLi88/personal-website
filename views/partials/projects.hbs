@@ -1,24 +1,22 @@
 <section id="projects">
-    <div class="">
-        <div class="container">
-            <h1 class="title">
-                Projects
-            </h1>
-            <div class="row" ng-app="proApp">
-                {{#each project}}
-                    <div class="col-lg-4 col-xs-12 proj-item {{name}} wow fadeInUpSmall animated" data-wow-delay="{{times @index}}s">
-                        <div class="proj-item-inner" ng-init="{{name}}IsShow=false">
-                            <img class="img-thumbnail" src="images/pic/projects/{{name}}.jpg" ng-click="{{name}}IsShow=!{{name}}IsShow">
-                            <div class="description-container" ng-click="{{name}}IsShow=!{{name}}IsShow" ng-show="{{name}}IsShow">
-                                <h3>{{title}}</h3>
-                                <div class="description">
-                                    {{description}}
-                                </div>
+    <div class="container">
+        <h1 class="title">
+            Projects
+        </h1>
+        <div class="row" ng-app="proApp">
+            {{#each project}}
+                <div class="proj-item {{name}} wow fadeInUpSmall animated vertical-stack" data-wow-delay="{{times @index}}s">
+                    <div class="proj-item-inner" ng-init="{{name}}IsShow=false">
+                        <img class="img-thumbnail" src="images/pic/projects/{{name}}.jpg" ng-click="{{name}}IsShow=!{{name}}IsShow">
+                        <div class="description-container" ng-click="{{name}}IsShow=!{{name}}IsShow" ng-show="{{name}}IsShow">
+                            <h3>{{title}}</h3>
+                            <div class="description">
+                                {{description}}
                             </div>
                         </div>
                     </div>
-                {{/each}}
-            </div>
+                </div>
+            {{/each}}
         </div>
     </div>
 </section>

@@ -1,8 +1,16 @@
 var proApp = angular.module("proApp",[]);
+
 var portfolio = portfolio || {};
 portfolio = {
-    //Navigate Menu scroll
+
+    /*
+        When scroll webpage:
+        1.activate the corresponding menu button
+        2.close open navbar
+        3.hide person thumb
+    */
     onScroll :function(event){
+        //activate the corresponding menu button
         var scrollPos = $(document).scrollTop();
         $('#myNavbar a').each(function () {
             var currLink = $(this);
@@ -12,11 +20,28 @@ portfolio = {
                 currLink.parent('li').addClass("active");
             }
         });
+        //close open navbar
+        var $navbar = $(".navbar-collapse");
+        var _opened = $navbar.hasClass("in");
+        if(_opened === true){
+            $navbar.collapse('hide');
+        }
+        //hide thumb
+        var homeEle = $('#home');
+        if(scrollPos > homeEle.position().top + homeEle.height()){
+            $(".brand-img").width(50);
+            $(".brand-img").height(50);
+        }else{
+            $(".brand-img").width(80);
+            $(".brand-img").height(80);
+        }
     },
+
+    //When click menu button, do scrolling and activate the corresponding menu button
     dealMenuClick:function(){
         $(document).on("scroll", portfolio.onScroll);
         //smoothscroll
-        $('#myNavbar a[href^="#"]').on('click', function (e) {
+        $('a[href^="#"]').on('click', function (e) {
             e.preventDefault();
             $(document).off("scroll");
 
@@ -30,10 +55,13 @@ portfolio = {
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top+2
             }, 500, 'swing', function () {
+                window.location.hash = target;
                 $(document).on("scroll", portfolio.onScroll);
             });
         });
     },
+
+    //When input an address with hash in browser, activate the corresponding menu button
     updateMenu:function(){
         var windowHash = window.location.hash;
         if(windowHash===''){
@@ -51,12 +79,34 @@ portfolio = {
             }
         });
     },
-    // Hobby page
+
+    //Close open collapsed menu when clicking outside
+    hideMenu:function() {
+        $(document).click(function (event) {
+            var clickover = $(event.target);
+            var $navbar = $(".navbar-collapse");
+            var _opened = $navbar.hasClass("in");
+            if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+                $navbar.collapse('hide');
+            }
+        });
+    },
+
+    //Complement animate effects with wow.js
+    doWow:function(){
+        new WOW({
+            offset:100
+        }).init();
+    },
+
+    /************************ Hobby page ***************************/
+
+    //Active the hobby submenu button after click it
     updateActiveNav:function(){
         var liList = $(".hobby-nav li");
         var liLen = liList.length;
         var type = "";
-        $(".hobby-nav li").click(function(){
+        $(".hobby-nav li").click(function(e){
             for(var i=0;i<liLen;i++){
                 $(liList[i]).removeClass('active');
                 type = $(liList[i]).attr('data-type');
@@ -67,6 +117,8 @@ portfolio = {
             $('.'+type+'-con').removeClass('hide');
         });
     },
+
+    //Display the images in carousel way
     dealCarousel:function(){
         var travel = $("#travel-carousel");
         var cooking = $("#cooking-carousel");
@@ -99,18 +151,14 @@ portfolio = {
             cooking.trigger('owl.next');
         })
     },
-    doWow:function(){
-        new WOW({
-            offset:100
-        }).init();
-    },
+
     onReady: function(){
         portfolio.updateActiveNav();
         portfolio.dealCarousel();
         portfolio.updateMenu();
         portfolio.dealMenuClick();
+        portfolio.hideMenu();
         portfolio.doWow();
     }
-
 }
 $(portfolio.onReady);

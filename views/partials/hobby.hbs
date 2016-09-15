@@ -1,45 +1,43 @@
 <section id="hobby">
     <div class="container">
-        <div class="">
-            <h1 class="title">
-                Hobbies
-            </h1>
-            <div class="hobby-nav">
-                <ul class="nav">
-                    <li class="travel active" data-type="travel">
-                        <a >Travel</a>
-                    </li>
-                    <li class="cooking" data-type="cooking">
-                        <a >Cooking</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <div class="travel-con">
-                    <div id="travel-carousel">
-                        {{#each travel}}
-                            <div class="item wow fadeInUpSmall animated" data-wow-delay="{{times @index}}s">
-                                <img class="grid-item" src="{{this}}" alt="image">
-                            </div>
-                        {{/each}}
-                    </div>
-                    <div class="lrbtn">
-                        <i class="prev fa fa-chevron-circle-left"></i>
-                        <i class="next fa fa-chevron-circle-right"></i>
-                    </div>
+        <h1 class="title">
+            Hobbies
+        </h1>
+        <div class="hobby-nav">
+            <ul class="nav">
+                <li class="travel active" data-type="travel">
+                    <a>Travel</a>
+                </li>
+                <li class="cooking" data-type="cooking">
+                    <a>Cooking</a>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <div class="travel-con">
+                <div id="travel-carousel">
+                    {{#each travel}}
+                        <div class="item wow fadeInUpSmall animated" data-wow-delay="{{times @index}}s">
+                            <img class="grid-item" src="{{this}}" alt="image">
+                        </div>
+                    {{/each}}
                 </div>
-                <div class="cooking-con hide">
-                    <div id="cooking-carousel">
-                        {{#each cooking}}
-                            <div class="item wow fadeInUpSmall animated" data-wow-delay="{{times @index}}s">
-                                <img class="grid-item" src="{{this}}" alt="image">
-                            </div>
-                        {{/each}}
-                    </div>
-                    <div class="lrbtn">
-                        <i class="prev fa fa-chevron-circle-left"></i>
-                        <i class="next fa fa-chevron-circle-right"></i>
-                    </div>
+                <div class="lrbtn">
+                    <i class="prev fa fa-chevron-circle-left"></i>
+                    <i class="next fa fa-chevron-circle-right"></i>
+                </div>
+            </div>
+            <div class="cooking-con hide">
+                <div id="cooking-carousel">
+                    {{#each cooking}}
+                        <div class="item wow fadeInUpSmall animated" data-wow-delay="{{times @index}}s">
+                            <img class="grid-item" src="{{this}}" alt="image">
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="lrbtn">
+                    <i class="prev fa fa-chevron-circle-left"></i>
+                    <i class="next fa fa-chevron-circle-right"></i>
                 </div>
             </div>
         </div>

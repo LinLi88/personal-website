@@ -1,0 +1,65 @@
+header{
+  .jumbotron{
+    background: url("../images/bg/bg_jb_blue.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: $screenHeight;
+    text-transform:uppercase;
+    color:#fff;
+    position:relative;
+
+    .jumbo-inner-wrapper{
+      max-width:500px;
+      margin:auto;
+      text-align:center;
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      height:160px;
+      h1{
+        font-weight: 700;
+        margin:50px auto 16px;
+      }
+      .gradient-line{
+        height: 1px;
+        @include gradient-background($borderGray);
+      }
+      p{
+        margin-top:15px;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm){
+    .jumbotron{
+      height: 260px;
+    }
+  }
+}
+
+footer{
+  background-color:$footerBgGray;
+  color:$footerFontGray;
+  border-top:#e7e7e7 1px solid;
+  padding:20px;
+  text-align:center;
+  .github{
+    cursor:pointer;
+  }
+  .github:hover{
+    text-decoration: none;
+  }
+  .goto-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    font-size:36px;
+    a{
+      color:rgba($primaryBlue,0.8);
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+}

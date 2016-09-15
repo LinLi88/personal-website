@@ -3,11 +3,10 @@
     "about":"Hello, My name is Lin LI. I came from Beijing, China. I just moved here several months ago. I am major in computer science and technology. I like web developing very much. Now I am looking for a job of web development.  I hope I can see you soon!",
     "info":[
         {"item":"Name","content":"Lin LI"},
+        {"item":"Gender","content":"Female"},
         {"item":"Country","content":"China"},
-        {"item":"Birth","content":"02/23/1988"},
-        {"item":"Phone","content":"(571)335-2310"},
         {"item":"Email","content":"gloriali1988@gmail.com"},
-        {"item":"Address","content":"12195 Lincoln Lake Way, Fairfax"}
+        {"item":"Address","content":"Virginia, US"}
     ]
   },
   "experienceData":[{
@@ -16,11 +15,11 @@
     "iconType":"wrench",
     "position":"Beijing",
     "company":"Procuratorate of Beijing",
-    "content":"Managed several Case Management Systems and Office Systems. Supported new System getting online."
+    "content":"Managed and maintained several case management systems, content management systems and some office systems. Solved about 2000 issues raised by users. Supported new system getting online. Processed system initialization works."
   },
   {
     "period":"2012-2013",
-    "job":"Web Development Engineer Intern",
+    "job":"Web Developer Intern",
     "iconType":"laptop",
     "position":"Beijing",
     "company":"Jike",
@@ -55,14 +54,14 @@
     "description":"Processed data visualization using d3.js and drew a weibo propagation chart in circle-packing’s way by SVG."
   }],
 "travelData":[
-    "images/pic/travel/111.jpg",
-    "images/pic/travel/112.jpg",
-    "images/pic/travel/113.jpg",
-    "images/pic/travel/114.jpg",
-    "images/pic/travel/115.jpg",
-    "images/pic/travel/116.jpg",
-    "images/pic/travel/117.jpg",
-    "images/pic/travel/118.jpg"
+    "images/pic/travel/1.jpg",
+    "images/pic/travel/2.jpg",
+    "images/pic/travel/3.jpg",
+    "images/pic/travel/4.jpg",
+    "images/pic/travel/5.jpg",
+    "images/pic/travel/6.jpg",
+    "images/pic/travel/7.jpg",
+    "images/pic/travel/8.jpg"
  ],
 "cookData":[
     "images/pic/cooking/1.jpg",

@@ -1,67 +1,64 @@
 #expEdu{
-  background:url("../images/bg/bg_white.png") no-repeat center;
+  background:url("../images/bg/bg_white_2.jpg") no-repeat center;
   background-size:cover;
   .exp-edu{
-    .row-inner{
+    .row{
+      display:flex;
+      flex-wrap:wrap;
       .item{
         padding:20px;
+        width:33.333%;
         .title{
           text-align: center;
         }
-        .inner{
+        .rect{
           width:100%;
-          padding-bottom:80%;
-          position:relative;
+          height:100%;
           background-color:$bodyBgGray;
           border-radius:$border-radius-base;
           @include box-shadow($shadowGray);
-          .rect{
-            color:$fontGray;
-            height: 100%;
-            position:absolute;
-            left:0;
-            right:0;
-            padding-top:5px;
-            .lr-padding{
-              padding:0 20px;
+          color:$fontGray;
+          display:flex;
+          flex-direction: column;
+          .lr-padding{
+            padding:0 20px;
+          }
+          .row-1{
+            padding-top:10px;
+            padding-bottom:10px;
+            .pull-right{
+              color:$primaryBlue;
             }
-            .row-1{
-              height:15%;
-              padding-top:10px;
-              padding-bottom:10px;
-              .pull-right{
-                color:$primaryBlue;
-                font-weight:bold;
-              }
+          }
+          .row-2{
+            color:#000;
+            padding-top:20px;
+            padding-bottom:20px;
+            position:relative;
+            .bg-icon{
+              margin-right:10px;
+              color:#F3E17E;
             }
-            .row-2{
-              height:70%;
-              color:#000;
-              padding-top:15px;
-              padding-bottom:10px;
-              position:relative;
-              .bg-icon{
-                margin-right:10px;
-                color:#F3E17E;
-              }
-            }
-            .row-3{
-              height:15%;
-              padding-top:10px;
-              padding-bottom:10px;
-              .position{
-                .glyphicon-map-marker{
-                  color:#c4c4c4;
-                }
+            flex-grow:1;
+          }
+          .row-3{
+            padding-top:10px;
+            padding-bottom:10px;
+            .position{
+              .glyphicon-map-marker{
+                color:#c4c4c4;
               }
             }
           }
         }
       }
     }
+    .show-md{
+      display:none;
+    }
   }
   #exp{
-    .row-inner{
+    .row{
       .title{
         margin-top:45%;
       }
@@ -72,16 +69,21 @@
     }
   }
   #edu{
-    .row-inner{
-      .inner{
-        padding-bottom:70%;
-        .row-2{
-          background-color:#f6f3ea;
-          margin-left:0;
-          margin-right:0;
+    .row{
+      .row-2{
+        background-color:#f6f3ea;
+        margin-left:0;
+        margin-right:0;
+        .logo-con{
+          padding:0;
+          max-width:90px;
           .u-logo{
             width:100%;
           }
+        }
+        .edu-info{
+          padding-top:10px;
+          padding-right:0;
           .university{
             font-weight: bold;
           }
@@ -89,6 +91,31 @@
       }
       .title{
         margin-top:15%;
+      }
+    }
+  }
+
+  @media screen and(max-width:$screen-md){
+    .exp-edu{
+      .title-con{
+        display:none;
+      }
+      .show-md{
+        display:block;
+      }
+      .row{
+        .item{
+          width:50%;
+        }
+      }
+    }
+  }
+  @media screen and(max-width:600px){
+    .exp-edu{
+      .row{
+        .item{
+          width:100%;
+        }
       }
     }
   }
