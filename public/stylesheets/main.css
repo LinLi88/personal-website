@@ -8006,6 +8006,29 @@ body {
     font-family: Impact, Charcoal, sans-serif; }
   body .vertical-stack {
     margin-top: 20px; }
+@-webkit-keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+  body .fadeInUpSmall {
+    -webkit-animation-name: fadeInUpSmall;
+    animation-name: fadeInUpSmall; }
+  body .hide-ele {
+    display: none; }
 
 header .jumbotron {
   background: url("../images/bg/bg_jb_blue.jpg") no-repeat center;
@@ -8128,8 +8151,6 @@ footer {
         #expEdu .exp-edu .row .item .rect .row-1 {
           padding-top: 10px;
           padding-bottom: 10px; }
-          #expEdu .exp-edu .row .item .rect .row-1 .pull-right {
-            color: #4c9ed9; }
         #expEdu .exp-edu .row .item .rect .row-2 {
           color: #000;
           padding-top: 20px;
@@ -8198,7 +8219,8 @@ footer {
         background: rgba(120, 178, 224, 0.95);
         position: absolute;
         top: 0;
-        padding: 6%; }
+        padding: 6%;
+        color: #fff; }
         #projects .row .proj-item .proj-item-inner .description-container .description {
           color: #000; }
     #projects .row .proj-item .proj-item-inner:hover {
